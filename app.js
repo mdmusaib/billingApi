@@ -7,7 +7,7 @@ const invoiceRoutes = require("./api/routes/invoiceRoutes");
 
 const app = express();
 
-const dbUrl = "mongodb+srv://mongodb:root@cluster0.6buf5.mongodb.net/billingApi";
+const dbUrl = "mongodb+srv://user1:root@cluster0.7r9if.mongodb.net/billing?retryWrites=true&w=majority";
 
 mongoose
   .connect(dbUrl, {
