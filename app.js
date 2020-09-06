@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 
-const invoiceRoutes = require("./api/routes/invoiceRoutes");
+const invoiceRoutes = require("./api/routes/productRoutes");
 
 const app = express();
 
