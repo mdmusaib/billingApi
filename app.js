@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 
-const invoiceRoutes = require("./api/routes/productRoutes");
+const productRoutes = require("./api/routes/productRoutes");
 
 const app = express();
 
@@ -41,7 +41,13 @@ app.use((res, req, next) => {
   next();
 });
 
-app.use("/billing", invoiceRoutes);
+app.use("/billing", productRoutes);
+
+app.use("/", (req, res, next) => {
+  res.status(200).json({
+    message: "App Working",
+  });
+});
 
 app.use((req, res, next) => {
   const error = new Error("Not Found");
