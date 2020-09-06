@@ -18,7 +18,7 @@ router.post("/create-invoice", (req, res, next) => {
         message: "Product Created Scuccessfully",
         invoiceDetails: [
           {
-            invoiceId: doc._id,
+            productName: doc._id,
             productName: doc.productName,
             productPrice: doc.productPrice,
           },
